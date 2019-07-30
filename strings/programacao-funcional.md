@@ -1,15 +1,17 @@
 # Programação Funcional em Python
 
 ## Conceitos
+
 *   Função pura: não modifica estado fora de seu escopo.
 *   Paradigma funcional:
     *   Composição de funções para a resolução de um problema;
-    *   Imutabilidade:
+    *   **Imutabilidade**:
         *   constantes para o desenvolvimento. Sem efeito colateral.
         *   É como uma função $f(x) = x+2$, ao passar x = 3 sempre retornará a mesma coisa e, além disso, x se mantém imutável.
-*   First class functions: funções usadas como valores.
-*   High order functions: funções podem ter outras funções como parâmetros, e retorná-las ou não como resultado.
+*   **First class functions**: funções usadas como valores.
+*   **High order functions**: funções podem ter outras funções como parâmetros, e retorná-las ou não como resultado.
 *   Vantagens da programação por função: modularidade, brevidade, concorrência (funções puras são `thread-safe`), testabilidade.
+
 ```py
 import string
 # Função pura
@@ -29,7 +31,8 @@ a = finalf(2, lambda x: x**2)
 ```
 
 ## Funções para programação funcional
-*   map:
+
+*   **map**:
     *   Aplica uma função para cada item de um iterável.
     *   `list comprehension` pode representar `map`.
     *   Assinatura: `map(function, iterable)`.
@@ -37,7 +40,8 @@ a = finalf(2, lambda x: x**2)
 a = map(lambda x: '!' + x + '!', ['Alô', 'teste'])
 # > ['!Alô!', '!teste!']
 ```
-*   filter:
+
+*   **filter**:
     *   Filtra itens baseados no critério da função.
     *   `list comprehension` pode representar `filter`.
     *   Assinatura: `filter(function or None, iterable)`.
@@ -46,6 +50,16 @@ str1 = 'walle'
 list1 = ['ellaw', 'josset', 'waell', 'liket']
 a = filter(lambda x: (Counter(str1) == Counter(x)), list1)
 # > ['ellaw', 'waell']
+```
+
+*   **reduce**:
+    *   `from functools import reduce`.
+    *   Aplica uma função em todos os elementos de maneira a reduzí-los a um valor final.
+    *   Assinatura: `functools.reduce(function, iterable)`.
+
+```py
+product = reduce((lambda x, y: x * y), range(1, 6))
+# > 120
 ```
 
 ## Funções úteis
