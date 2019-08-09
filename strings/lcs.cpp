@@ -16,6 +16,7 @@ using namespace std;
 
 const int MAX { 1010 };
 int L[MAX][MAX];
+// Memoization algorithm
 int lcs(string x, string y, int m, int n) {
     for(int i = 0; i <= m; i++) {
         for(int j = 0; j <= n; j++) {
