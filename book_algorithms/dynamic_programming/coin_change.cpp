@@ -1,10 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-/* Problema de Troca de moedas
-    - 
-*/
-
 int coinChange(vector<int> &coins, int amount) {
     // inicializa com um valor que é inalcançável, evitar MAX_INT por conta do overflow
     vector<int> dp(amount + 1, amount+1);
