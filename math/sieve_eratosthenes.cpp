@@ -2,6 +2,7 @@
 using namespace std;
 
 // Computa os primos menores ou iguais a n
+// Complexidade: O(NloglogN)
 vector<int> sieve(int n) {
     // sieve_v[i] = 0 denota que o i-ésimo número é primo
     vector<int> sieve_v(n+1, 0);
