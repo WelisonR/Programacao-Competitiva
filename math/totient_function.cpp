@@ -6,7 +6,7 @@ typedef long long ll;
 /*
 φ(N) = n * produtório (1 - 1/p) de todos os fatores p de n (p|n).
 φ(N): retorna a quantidade de coprimos com N até N (inclusive);
-    Ex.: φ(12) = 4 = {2, 3, 5, 7} 
+    Ex.: φ(12) = 4 = {1, 3, 5, 7} 
 Propriedades:
 1. Caso p seja primo, gcd(p, q) = 1 para 1 <= q < p. Logo: φ(p) = p-1
 2. Caso p seja primo e k >= 1, há exatamente (p^k)/p números entre 1 e p^k
